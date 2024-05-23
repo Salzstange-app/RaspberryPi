@@ -1,0 +1,26 @@
+---
+- name: 'Basic RaspberryPi Infrastructure'
+  hosts: local
+  tasks:
+
+  - name: 'Update the System'
+    become: yes
+    become_user: root
+    ansible.builtin.apt:
+      update_cache: true
+      upgrade: 'full'
+      
+   
+
+  - name: 'Basic Tools '
+    become: yes
+    become_user: root
+    ansible.builtin.apt:
+      name:
+        - nano
+        - git
+        - curl
+
+  - name: 'Basic Configuration'
+
+
