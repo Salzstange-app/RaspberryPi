@@ -15,3 +15,10 @@
         cd /docker-compose
         docker-compose up -d 
 
+
+
+ git:
+        repo: 'https://github.com/Salzstange-app/docker-compose.git'
+        dest: '/opt/docker-compose'
+        version: 'HEAD'
+        force: yes
