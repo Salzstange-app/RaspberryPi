@@ -1,0 +1,16 @@
+---
+
+- name: 'Basic Docker Setup'
+  hosts: local
+  tasks:
+     
+    - name: 'Clone docker-compose files from Github'
+      command: git clone https://github.com/Salzstange-app/docker-compose.git 
+
+
+    - name: 'Start docker-compose '
+      become: yes
+      become_user: root
+      command: docker-compose up -d 
+      
+  
