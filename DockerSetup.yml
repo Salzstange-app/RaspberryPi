@@ -11,6 +11,7 @@
     - name: 'Start docker-compose '
       become: yes
       become_user: root
-      command: docker-compose up -d 
-      
-  
+      shell: |
+        cd /docker-compose
+        docker-compose up -d 
+
