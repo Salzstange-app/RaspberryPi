@@ -3,7 +3,7 @@
 - name: File Setup
   ansible.builtin.debug:
     msg:
-      - "File Setup Wizzard"
+      - "File Setup with bash"
 
 
 - name: create folder
