@@ -1,0 +1,28 @@
+---
+
+
+- name: Initialize Setup
+  ansible.builtin.debug:
+    msg:
+      - "Welcome to the Setup Wizard"
+
+#- name: Update and upgrade all packages to the latest version
+ # ansible.builtin.apt:
+  #  update_cache: true
+   # upgrade: dist
+    #cache_valid_time: 3600
+
+    
+#- name: change Hostname
+  #ansible.builtin.hostname:
+   # name: Raspi 
+
+
+- name: Basic Software
+  become: true
+  become_user: root
+  ansible.builtin.apt:
+    name:
+      - git
+      - nano
+      - curl

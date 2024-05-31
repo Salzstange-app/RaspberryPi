@@ -1,0 +1,19 @@
+---
+- name: Portainer Setup
+  ansible.builtin.debug:
+    msg: 
+      - "Clone from Github"
+
+- name: Clone Github Repo
+  ansible.builtin.git:
+    repo: https://github.com/Salzstange-app/docker-compose.git
+    dest: /apt/docker/Portainer
+
+- name: start container
+  become: true
+  become_user: root
+  ansible.builtin.command:
+    chdir: /apt/docker/Portainer
+    cmd: docker compose up -d
+  
+

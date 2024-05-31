@@ -1,0 +1,8 @@
+---
+- name: 'Raspberry Pi configuration'
+  hosts: local
+  roles: 
+    - role: setup
+    - role: Files
+    - role: Docker
+    

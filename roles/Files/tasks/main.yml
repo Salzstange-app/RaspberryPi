@@ -1,0 +1,15 @@
+---
+
+- name: File Setup
+  ansible.builtin.debug:
+    msg:
+      - "File Setup Wizzard"
+
+
+- name: create folder
+  become: true
+  become_user: root
+  ansible.builtin.command:
+    chdir: /home/jaunger/Desktop/test/playbook/roles/Files/files
+    cmd: bash createFiles.bash
+
